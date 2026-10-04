@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Black.Hotspot</title>
+         <link rel="stylesheet"href="./style.css">
+        <p class="welcome">Welcome to Black.Hotspot</p>
+        <p>Fast, affordable and reliable internet access</p>
+       
+    </head>
+    <body>
+        <div class="container">
+            <h1>Black.Hotspot</h1>
+            <p class="tagline">Fast.Affordable.Reliable.</p>
+            <h2 class="packages-title">Choose Your Package</h2>
+            <div class="packages">
+            <div class="package">
+                <h3>1 Hours</h3>
+                <p>Ksh 10</p>
+                <button onclick="selectPackage('1Hour',10)">Connect Now</button>
+            </div>
+            <div class="package"> 
+                <h3>1.5 Hours</h3>
+                <p>Ksh 15</p>
+                <button onclick="selectPackage('1.5Hours',15)">Connect Now</button>
+            </div>
+            <div class="package">
+                <h3>8 Hours</h3>
+                <p>Ksh 20</p>
+                <button onclick="selectPackage('8Hours',20)">Connect Now</button>
+            </div>
+            <div class="package">
+                <h3>12 Hours</h3>
+                <p>Ksh 25</p>
+                <button onclick="selectPackage('12Hours',25 )">Connect Now</button>
+            </div>
+            <div class="package">
+                <h3>24 Hours</h3>
+                <p>Ksh 30</p>
+                <button onclick="selectPackage('24Hours',30)">Connect Now</button>
+            </div>
+            <div class="package">
+                <h3>1 Week</h3>
+                <p>Ksh 175</p>
+                <button onclick="selectPackage('1Week',175)">Connect Now</button>
+            </div>
+            <div class="package">
+                <h3>1 Month</h3>
+                <p>Ksh 600</p>
+                <button onclick="selectPackage('1Month',600)">Connect Now</button>
+            </div>
+        </div>
+        </div>
+       <script>
+
+function selectPackage(PackageName, PackagePrice) {
+
+    document.getElementById("overlay").style.display = "block";
+
+    document.getElementById("paymentBox").style.display = "block";
+
+    document.getElementById("selectedPackage").textContent =
+        PackageName + " - Ksh " + PackagePrice;
+
+    
+}
+
+
+function closePayment() {
+
+    document.getElementById("paymentBox").style.display = "none";
+
+    document.getElementById("overlay").style.display = "none";
+}
+
+
+function makePayment() {
+
+    const phoneNumber =
+        document.getElementById("phoneNumber").value.trim();
+
+    if (phoneNumber === "") {
+        alert("Please enter your M-Pesa phone number.");
+        return;
+    }
+
+    if (!/^\d{10}$/.test(phoneNumber)) {
+        alert("Please enter a valid Kenyan phone number.");
+        return;
+    }
+
+    alert("M-Pesa payment setup is ready. We will connect the actual payment system next.");
+}
+
+</script>
+        <div id="overlay"class="overlay"></div>
+        
+        <div id="paymentBox"class="payment-box"style="display:none;">
+    
+            <h2>BLACK.Hotspot</h2>
+            <p id="selectedPackage"></p>
+
+            <label>M-Pesa Phone Number:</label>
+
+            <input type="tel" id="phoneNumber" placeholder="07XXXXXXXX" pattern="[0-9]{10}" required>
+
+            <button onclick="makePayment()">Pay with M-Pesa</button>
+            <button class="cancel"onclick="closePayment()">Cancel</button>
+        
+        </div>
+    </body>
+</html>

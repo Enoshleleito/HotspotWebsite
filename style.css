@@ -1,0 +1,119 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+
+    background:linear-gradient(
+        135deg,
+        #000000,
+        #0057b8,
+        #00a86b);
+    color:white;
+    min-height:100vh;
+
+}
+
+h1{
+    text-align:center;
+    padding:25px;
+    margin:0;
+    background-color: rgba(0,0,0,0.5);
+}
+.package p{
+    font-size:28px;
+    font-weight:bold;
+    color:#00a86b;
+    margin:15px 0;
+}
+.package h3{
+    font-size:28px;
+    color:#ffffff
+    
+}
+
+button{
+    background:#0066ff;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    transition:0.3s;
+}
+button:hover{
+    transform:translateY(-8px);
+    background:#00a86b;
+    transform:scale(1.05);
+}
+p{
+    text-align: center;
+    font-size:18px;
+}
+h2{
+    color:#29ab87;
+    margin-left:40px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.welcome {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00a86b;
+    margin-bottom: 10px;
+}
+
+.packages-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 35px 0 25px;
+}
+
+.payment-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 320px;
+    max-width: 85%;
+    padding: 25px;
+
+    background: #111;
+    border: 2px solid #ff8c00;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+
+    text-align: center;
+    z-index: 9999;
+
+    .overlay {
+        position: fixed;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9998;
+        display: none;
+    }
+    .overlay.active {
+        display: block;
+    }
+    
+
+}
+
+  
+
+
+
