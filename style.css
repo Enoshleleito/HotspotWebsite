@@ -1,119 +1,570 @@
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
+/* =========================
+   GENERAL PAGE
+   ========================= */
 
-    background:linear-gradient(
+body {
+
+ body{   
+    background: linear-gradient(
         135deg,
         #000000,
         #0057b8,
-        #00a86b);
-    color:white;
-    min-height:100vh;
+        #00a86b,
+        #000000
+    );
 
-}
-
-h1{
-    text-align:center;
-    padding:25px;
-    margin:0;
-    background-color: rgba(0,0,0,0.5);
-}
-.package p{
-    font-size:28px;
-    font-weight:bold;
-    color:#00a86b;
-    margin:15px 0;
-}
-.package h3{
-    font-size:28px;
-    color:#ffffff
-    
+    background-size: 400% 400%;
+    animation: backgroundMove 12s ease infinite;
 }
 
-button{
-    background:#0066ff;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:30px;
-    cursor:pointer;
-    font-size:15px;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.4);
-    transition:0.3s;
-}
-button:hover{
-    transform:translateY(-8px);
-    background:#00a86b;
-    transform:scale(1.05);
-}
-p{
-    text-align: center;
-    font-size:18px;
-}
-h2{
-    color:#29ab87;
-    margin-left:40px;
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-li {
-    margin-bottom: 10px;
+    font-family: Lobster, Helvetica, A;
+
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #000000,
+        #0057b8,
+        #00a86b
+    );
 }
+
+@keyframes fadein{
+        from{
+            opacity:0;
+        }
+
+        to{
+            opacity:1;
+        }
+    }
+
+
+/* =========================
+   WELCOME TEXT
+   ========================= */
 
 .welcome {
+    text-align: center;
+    font-family: Algerian;
+
     font-size: 24px;
+
     font-weight: bold;
+
     color: #00a86b;
-    margin-bottom: 10px;
+
+    margin: 20px 0 5px;
 }
 
-.packages-title {
-    font-size: 30px;
+
+.intro {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MAIN TITLE
+   ========================= */
+
+h1 {
+background: rgba(0, 0, 0, 0.45);
+border: 2px solid #00a86b;
+border-radius: 50px;
+padding: 15px 30px;
+width: fit-content;
+
+text-align:center;
+margin: 20px auto !important;
+box-shadow: 0 0 15px #0066ff, 0 0 30px #00a86b;
+
+    text-shadow: 0 0 10px #0066ff,0 0 20px #00a86b;
+animation: floatGlow 3s ease-in-out infinite;
+font:Algerian;
+color: #62a4e2dc;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin: 0;
+
+    background-color: rgba(7, 71, 36, 0.5);
+}
+
+@keyframes floatGlow {
+    0% {
+        transform: translateY(0);
+        text-shadow: 0 0 10px #0066ff, 0 0 20px #00a86b;
+    }
+
+    50% {
+        transform: translateY(-8px);
+        text-shadow: 0 0 20px #0066ff, 0 0 35px #00a86b;
+    }
+
+    100% {
+        transform: translateY(0);
+        text-shadow: 0 0 10px #0066ff, 0 0 20px #00a86b;
+    }
+}
+
+
+.tagline {
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CUSTOMER CARE
+   ========================= */
+
+.customer-care {
+    text-align: center;
+    font-family: Aharoni;
+
+    color:#0ef806;
+
+    margin: 20px 0;
+
+    padding: 15px;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    border-radius: 10px;
+}
+
+
+.already-paid {
+    text-align: center;
+
+    color:rgb(243, 63, 9);
+
+    margin: 20px 0;
+
+    padding: 15px;
+
+    background: rgba(17, 17, 17, 0.5);
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   PACKAGES TITLE
+   ========================= */
+.package{
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
+
+}
+
+.package p{
+    font-size: 22px;
     font-weight: bold;
-    color: white;
+    color:#000000;
+    transition: transform 0.3s ease,text-shadow 0.3s ease;
+}
+
+.package:hover p{
+        font-size: 22px;
+    font-weight: bold;
+    color:#000000;
+    text-shadow:
+     0 0 1px #0d0e0d,
+     0 0 2px #0c0c0c;
+    transform: scale(1.15);
+    text-shadow: 0 0 10px #0066ff, 0 0 20px #00a86b;
+}
+
+.package:hover{
+    transform:translate(-8px);
+    box-shadow:0 8px 20px rgba(0, 168,107,0.4);
+}
+
+.package{
+    animation: packageAppear 0.8s ease-out both,packageGlow 3s ease-in-out infinite;
+}
+
+.package:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.package:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.package:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.package:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.package:nth-child(5) {
+    animation-delay: 1s;
+}
+
+
+   .packages-title {
+    text-align: center;
+    font-family: Cooper Black;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: rgb(4, 245, 56);
+
     margin: 35px 0 25px;
 }
 
-.payment-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    width: 320px;
-    max-width: 85%;
-    padding: 25px;
+/* =========================
+   PACKAGE GRID
+   ========================= */
 
-    background: #111;
-    border: 2px solid #ff8c00;
-    border-radius: 30px;
+@keyframes packageGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 168, 107, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 18px rgba(0, 168, 107, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(0, 168, 107, 0.3);
+    }
+}
+
+   .packages {
+    display: grid;
+
+    color: #08ecb3;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px;
+
     box-sizing: border-box;
+}
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 
-    text-align: center;
-    z-index: 9999;
+/* =========================
+   PACKAGE CARD
+   ========================= */
 
-    .overlay {
-        position: fixed;
-        top: 0; 
-        left: 0;
-        width: 100%;
-        height: 100%;
 
-        background: rgba(0, 0, 0, 0.7);
-        z-index: 9998;
-        display: none;
-    }
-    .overlay.active {
-        display: block;
-    }
-    
+.package{
+    transition: transform 0.3s ease,box-shadow 0.3s ease;
 
 }
 
+.package:hover{
+    transform: translate(-10px)scale(1.05);
+    box-shadow:
+    0 0 10px #0066ff,
+    0 0 25px #00a86b;
+}
+   .package {
+    background: rgba(10, 10, 10, 0.55);
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        3px 3px 10px #a07bcae5;
+}
+
+
+.package h3 {
+    font-size: 24px;
+
+    color: white;
+}
+
+
+.package p {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #7407f0;
+
+    margin: 15px 0;
+}
+
+
+
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+@keyframes packageAppear{
+    from{
+        opacity:o;
+        transform: translate(30px);
+    }
+    to{
+
+    opacity:1;
+    transform: translate(0);
+    }
+}
+
+button{
+transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 10px #0066ff,0 0 20px #00a86b;
+}
+
+   button {
+    background: #f58505;
+
+    color: rgb(248, 248, 248);
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 10px rgba(2, 238, 41, 0.4);
+
+    transition: 0.3s;
+}
+
+button{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #00a86b;
+    background: #00a86b;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   DARK OVERLAY
+   ========================= */
+
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(66, 68, 67, 0.75);
+
+    z-index: 9998;
+
+    display: none;
+}
+
+
+/* =========================
+   PAYMENT BOX
+   ========================= */
+
+.payment-box {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 320px;
+
+    max-width: 85%;
+
+    padding: 25px;
+
+    background: #111111;
+
+    border: 2px solid #ff8c00;
+
+    border-radius: 30px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.7);
+
+    text-align: center;
+
+    z-index: 9999;
+
+    display: none;
+}
+
+
+.payment-box h2 {
+    color: #00a86b;
+
+    margin-top: 0;
+}
+
+
+.payment-box p {
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+.payment-box label {
+    display: block;
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+
+.payment-box input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 2px solid #555555;
+
+    border-radius: 10px;
+
+    background: #222222;
+
+    color: white;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+.payment-box input:focus {
+    border-color: #00a86b;
+}
+
+
+.payment-box button {
+    margin: 15px 5px 0;
+}
+
+
+/* =========================
+   ERROR POPUP
+   ========================= */
+
+.error-popup {
+    position: fixed;
+
+    top: 35%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 280px;
+
+    max-width: 80%;
+
+    box-sizing: border-box;
+
+    padding: 14px 22px;
+
+    background: #ff3333;
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.6);
+
+    z-index: 10001;
+
+    display: none;
+
+    @keyframes floatTitle {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
   
 
 
 
+}

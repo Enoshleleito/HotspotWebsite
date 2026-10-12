@@ -1,111 +1,397 @@
- <!DOCTYPE html>
-<html>
-    <head>
-        <title>Black.Hotspot</title>
-         <link rel="stylesheet"href="./style.css">
-        <p class="welcome">Welcome to Black.Hotspot</p>
-        <p>Fast, affordable and reliable internet access</p>
-       
-    </head>
-    <body>
-        <div class="container">
-            <h1>Black.Hotspot</h1>
-            <p class="tagline">Fast.Affordable.Reliable.</p>
-            <h2 class="packages-title">Choose Your Package</h2>
-            <div class="packages">
-            <div class="package">
-                <h3>1 Hours</h3>
-                <p>Ksh 10</p>
-                <button onclick="selectPackage('1Hour',10)">Connect Now</button>
-            </div>
-            <div class="package"> 
-                <h3>1.5 Hours</h3>
-                <p>Ksh 15</p>
-                <button onclick="selectPackage('1.5Hours',15)">Connect Now</button>
-            </div>
-            <div class="package">
-                <h3>8 Hours</h3>
-                <p>Ksh 20</p>
-                <button onclick="selectPackage('8Hours',20)">Connect Now</button>
-            </div>
-            <div class="package">
-                <h3>12 Hours</h3>
-                <p>Ksh 25</p>
-                <button onclick="selectPackage('12Hours',25 )">Connect Now</button>
-            </div>
-            <div class="package">
-                <h3>24 Hours</h3>
-                <p>Ksh 30</p>
-                <button onclick="selectPackage('24Hours',30)">Connect Now</button>
-            </div>
-            <div class="package">
-                <h3>1 Week</h3>
-                <p>Ksh 175</p>
-                <button onclick="selectPackage('1Week',175)">Connect Now</button>
-            </div>
-            <div class="package">
-                <h3>1 Month</h3>
-                <p>Ksh 600</p>
-                <button onclick="selectPackage('1Month',600)">Connect Now</button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Black.Hotspot</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <p class="welcome">Welcome to Black.Hotspot</p>
+
+    <p class="intro">
+        Fast, affordable and reliable internet access
+    </p>
+
+    <h1>Black.Hotspot
+            📡
+    </h1>
+
+    <p class="tagline">
+        Fast.Affordable.Reliable.💡
+    </p>
+
+    <!--CUSTOMER CARE-->
+    <div class="customer-care">
+        <h2>Customer Care</h2>
+        <p>📞 Call/WhatsApp: <strong>0748487321/0798557447 🏷️</strong></p>
+        <p><a href="sms:YOURNUMBER" class="help-button">
+                   ✉ SMS   🌴
+                   </a>
+</p>
+    </div>
+    <div class="already-paid">
+        <button onclick="showAlreadyPaid()">
+            Already paid?🤷‍♂️ Click Here 📍
+        </button>
+    </div>
+
+    <!-- PACKAGES -->
+    <h2 class="packages-title">
+        Choose Your Package 📥
+    </h2>
+
+    <div class="packages">
+
+        <div class="package">
+            <h3>30 Minutes</h3>
+            <p>Ksh 5📡</p>
+            
+            <button onclick="selectPackage('30 Minutes', 5)">
+                
+                Connect Now
+           
+            </button>
         </div>
+
+        <div class="package">
+            <h3>3 Hours</h3>
+            <p>Ksh 10📡</p>
+            <button onclick="selectPackage('3 Hours', 10)">
+                Connect Now
+            </button>
         </div>
-       <script>
 
-function selectPackage(PackageName, PackagePrice) {
+        <div class="package">
+            <h3>1.5 Hours</h3>
+            <p>Ksh 15📡</p>
+            <button onclick="selectPackage('1.5 Hours', 15)">
+                Connect Now
+            </button>
+        </div>
 
-    document.getElementById("overlay").style.display = "block";
+        <div class="package">
+            <h3>8 Hours</h3>
+            <p>Ksh 20📡</p>
+            <button onclick="selectPackage('8 Hours', 20)">
+                Connect Now
+            </button>
+        </div>
 
-    document.getElementById("paymentBox").style.display = "block";
+        <div class="package">
+            <h3>12 Hours</h3>
+            <p>Ksh 25📡</p>
+            <button onclick="selectPackage('12 Hours', 25)">
+                Connect Now
+            </button>
+        </div>
 
-    document.getElementById("selectedPackage").textContent =
-        PackageName + " - Ksh " + PackagePrice;
+        <div class="package">
+            <h3>24 Hours</h3>
+            <p>Ksh 30📡</p>
+            <button onclick="selectPackage('24 Hours', 30)">
+                Connect Now
+            </button>
+        </div>
 
-    
-}
+        <div class="package">
+            <h3>2 Days</h3>
+            <p>Ksh 50📡</p>
+            <button onclick="selectPackage('2 Days', 50)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>3 Days</h3>
+            <p>Ksh 80📡</p>
+            <button onclick="selectPackage('3 Days', 80)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>1 Week</h3>
+            <p>Ksh 175📡</p>
+            <button onclick="selectPackage('1 Week', 175)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>2 Weeks</h3>
+            <p>Ksh 380📡</p>
+            <button onclick="selectPackage('2 Weeks', 380)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>20 Days</h3>
+            <p>Ksh 400📡</p>
+            <button onclick="selectPackage('20 Days', 400)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>1 Month</h3>
+            <p>Ksh 600📡</p>
+            <button onclick="selectPackage('1 Month', 600)">
+                Connect Now
+            </button>
+        </div>
+
+        <div class="package">
+            <h3>1 Month 3 Devices</h3>
+            <p>Ksh 1200📡</p>
+            <button onclick="selectPackage('1 Month 3 Devices', 1200)">
+                Connect Now
+            </button>
+        </div>
+
+    </div>
 
 
-function closePayment() {
-
-    document.getElementById("paymentBox").style.display = "none";
-
-    document.getElementById("overlay").style.display = "none";
-}
+    <!-- DARK OVERLAY -->
+    <div id="overlay" class="overlay"></div>
 
 
-function makePayment() {
+    <!-- ERROR POPUP -->
+    <div id="errorPopup" class="error-popup">
+        Please enter a valid Safaricom phone number
+    </div>
 
+
+    <!-- PAYMENT BOX -->
+    <div id="paymentBox" class="payment-box">
+
+        <h2>BLACK.Hotspot</h2>
+
+        <p id="selectedPackage">
+            Package: 24 Hours
+        </p>
+
+        <p id="selectedPrice">
+            Amount: Ksh 30
+        </p>
+
+        <label for="phoneNumber">
+            M-Pesa Phone Number:
+        </label>
+
+        <input
+            type="tel"
+            id="phoneNumber"
+            placeholder="0XXXXXXXXX"
+            maxlength="10"
+            inputmode="numeric"
+        >
+
+        <button type="button"onclick="makePayment()">
+            Pay Now
+        </button>
+
+        <button type="button"onclick="closePayment()">
+            Cancel
+        </button>
+
+    </div>
+ 
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function selectPackage(packageName, packagePrice) {
+
+            document.getElementById("selectedPackage").innerText =
+                "Package: " + packageName;
+
+            document.getElementById("selectedPrice").innerText =
+                "Amount: Ksh " + packagePrice;
+
+            document.getElementById("overlay").style.display =
+                "block";
+
+            document.getElementById("paymentBox").style.display =
+                "block";
+
+            document.getElementById("phoneNumber").value = "";
+
+            document.getElementById("errorPopup").style.display =
+                "none";
+        }
+
+
+        function closePayment() {
+
+            document.getElementById("paymentBox").style.display =
+                "none";
+
+            document.getElementById("overlay").style.display =
+                "none";
+
+            document.getElementById("errorPopup").style.display =
+                "none";
+        }
+
+
+        
+       async function makePayment() {
     const phoneNumber =
         document.getElementById("phoneNumber").value.trim();
 
-    if (phoneNumber === "") {
-        alert("Please enter your M-Pesa phone number.");
+    const errorPopup =
+        document.getElementById("errorPopup");
+
+    if (!/^0[17]\d{8}$/.test(phoneNumber)) {
+        showError();
         return;
     }
 
-    if (!/^\d{10}$/.test(phoneNumber)) {
-        alert("Please enter a valid Kenyan phone number.");
-        return;
-    }
+    errorPopup.style.display = "none";
 
-    alert("M-Pesa payment setup is ready. We will connect the actual payment system next.");
+    const amountText =
+        document.getElementById("selectedPrice").innerText;
+
+    const amount = Number(
+        amountText.replace(/[^\d]/g, "")
+    );
+
+    // Your current ngrok address.
+    // Update it if ngrok assigns a new address.
+    const API_BASE =
+        "https://velocity-stable-linseed.ngrok-free.dev";
+
+    try {
+        const response = await fetch(
+            `${API_BASE}/stkpush`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    phoneNumber,
+                    amount
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        console.log("STK PUSH RESPONSE:", data);
+
+        if (!response.ok || !data.CheckoutRequestID) {
+            alert(
+                "M-Pesa request failed: " +
+                (data.message || "Unknown error") +
+                (data.errorCode
+                    ? " (Code: " + data.errorCode + ")"
+                    : "")
+            );
+            return;
+        }
+
+        const checkoutID = data.CheckoutRequestID;
+
+        alert(
+            data.message ||
+            "Request submitted. Check your phone for the M-Pesa prompt."
+        );
+
+        // Wait for callback-confirmed payment status.
+        for (let attempt = 0; attempt < 30; attempt++) {
+            await new Promise(resolve =>
+                setTimeout(resolve, 2000)
+            );
+
+            const statusResponse = await fetch(
+                `${API_BASE}/payment-status/` +
+                encodeURIComponent(checkoutID)
+            );
+
+            const payment = await statusResponse.json();
+
+            console.log("PAYMENT STATUS:", payment);
+
+            if (payment.status === "success") {
+                alert(
+                    "Payment confirmed!" +
+                    (payment.receipt
+                        ? "\nM-Pesa receipt: " + payment.receipt
+                        : "") +
+                    "\nWelcome to Black.Hotspot!"
+                );
+                return;
+            }
+
+            if (payment.status === "failed") {
+                alert(
+                    "Payment was not completed: " +
+                    payment.message
+                );
+                return;
+            }
+
+            if (payment.status === "unknown") {
+                alert(
+                    "Payment status could not be found. " +
+                    "Check the server before trying to pay again."
+                );
+                return;
+            }
+        }
+
+        alert(
+            "Payment is still pending. Check your phone and " +
+            "server status. Do not submit another payment yet."
+        );
+
+    } catch (error) {
+        console.error("PAYMENT ERROR:", error);
+
+        alert(
+            "Could not contact the payment server. " +
+            "Check that Node.js and ngrok are running."
+        );
+    }
 }
 
-</script>
-        <div id="overlay"class="overlay"></div>
-        
-        <div id="paymentBox"class="payment-box"style="display:none;">
+
+        function showError() {
+
+            const errorPopup =
+                document.getElementById("errorPopup");
+
+            errorPopup.style.display = "block";
+
+
+            setTimeout(function () {
+
+                errorPopup.style.display = "none";
+
+            }, 3000);
+        }
+
+
+        document.getElementById("overlay").onclick =
+            function () {
+
+                closePayment();
+
+            };
+
+    </script>
+
     
-            <h2>BLACK.Hotspot</h2>
-            <p id="selectedPackage"></p>
 
-            <label>M-Pesa Phone Number:</label>
+</body>
 
-            <input type="tel" id="phoneNumber" placeholder="07XXXXXXXX" pattern="[0-9]{10}" required>
-
-            <button onclick="makePayment()">Pay with M-Pesa</button>
-            <button class="cancel"onclick="closePayment()">Cancel</button>
-        
-        </div>
-    </body>
 </html>

@@ -1,0 +1,12 @@
+# Keep secrets private
+backend/.env
+.env
+.env.*
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Local and temporary files
+.DS_Store
+Thumbs.db
